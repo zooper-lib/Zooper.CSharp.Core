@@ -19,6 +19,6 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Zooper")]
 [assembly: AssemblyProduct("Zooper.CSharp.Core")]
-[assembly: AssemblyVersion("0.0.1")]
-[assembly: AssemblyInformationalVersion("0.0.1")]
-[assembly: AssemblyFileVersion("0.0.1")]
+[assembly: AssemblyVersion("0.0.2")]
+[assembly: AssemblyInformationalVersion("0.0.2")]
+[assembly: AssemblyFileVersion("0.0.2")]
