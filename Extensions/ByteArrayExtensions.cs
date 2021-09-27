@@ -1,4 +1,4 @@
-﻿namespace Zooper.CSharp.Core.Extensions.ArrayExtensions
+﻿namespace Zooper.CSharp.Core.Extensions
 {
 	public static class ByteArrayExtensions
 	{

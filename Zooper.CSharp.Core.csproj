@@ -2,11 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>warnings</Nullable>
+    <Company>Zooper</Company>
+    <Copyright>Zooper</Copyright>
+    <PackageProjectUrl>https://github.com/zooper-lib</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/zooper-lib/Zooper.CSharp.Core</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove=".gitignore" />
+    <None Remove="Zooper.CSharp.Core.sln.DotSettings" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+    </None>
   </ItemGroup>
 
 </Project>

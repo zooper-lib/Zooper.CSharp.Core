@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Zooper.CSharp.Core.Extensions.ArrayExtensions
+namespace Zooper.CSharp.Core.Extensions
 {
     public static class GenericArrayExtensions
     {
@@ -28,7 +28,7 @@ namespace Zooper.CSharp.Core.Extensions.ArrayExtensions
         /// <param name="targetArray">The array the others will be merged into</param>
         /// <param name="arrays">The arrays to merge</param>
         /// <returns>The merged array</returns>
-        public static T[] Merge<T>(this T[] targetArray, params T[][] arrays)
+        public static T[] Merge<T>(this T[]? targetArray, params T[][] arrays)
         {
             targetArray ??= Array.Empty<T>();
 

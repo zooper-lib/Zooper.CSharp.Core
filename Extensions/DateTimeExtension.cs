@@ -1,6 +1,7 @@
 ﻿using System;
+// ReSharper disable UnusedMember.Global
 
-namespace Zooper.CSharp.Core.Extensions.DateTimeExtensions
+namespace Zooper.CSharp.Core.Extensions
 {
 	public static class DateTimeExtension
 	{
@@ -13,11 +14,15 @@ namespace Zooper.CSharp.Core.Extensions.DateTimeExtensions
 		/// <returns></returns>
 		public static DateTime NthOf(this DateTime curDate, int occurrence, DayOfWeek day)
 		{
-			var fday = new DateTime(curDate.Year, curDate.Month, 1);
+			var firstDay = new DateTime(curDate.Year, curDate.Month, 1);
 
-			var fOc = fday.DayOfWeek == day ? fday : fday.AddDays(day - fday.DayOfWeek);
-			// CurDate = 2011.10.1 Occurance = 1, Day = Friday >> 2011.09.30 FIX. 
-			if (fOc.Month < curDate.Month) occurrence = occurrence + 1;
+			var fOc = firstDay.DayOfWeek == day ? firstDay : firstDay.AddDays(day - firstDay.DayOfWeek);
+
+			if (fOc.Month < curDate.Month)
+			{
+				occurrence++;
+			}
+
 			return fOc.AddDays(7 * (occurrence - 1));
 		}
 
@@ -28,7 +33,10 @@ namespace Zooper.CSharp.Core.Extensions.DateTimeExtensions
 
 			var diff = day - lastDow;
 
-			if (diff > 0) diff -= 7;
+			if (diff > 0)
+			{
+				diff -= 7;
+			}
 
 			System.Diagnostics.Debug.Assert(diff <= 0);
 
@@ -47,6 +55,16 @@ namespace Zooper.CSharp.Core.Extensions.DateTimeExtensions
 			var endDate = startDate.Add(duration);
 
 			return dateTime >= startDate && dateTime < endDate;
+		}
+
+		/// <summary>
+		/// Converts the DateTime to an ISO 8601 string
+		/// </summary>
+		/// <param name="dateTime">The DateTime</param>
+		/// <returns>The ISO 8601 string</returns>
+		public static string ToIso8601(this DateTime dateTime)
+		{
+			return dateTime.ToString("o");
 		}
 	}
 }

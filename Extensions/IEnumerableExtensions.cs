@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Zooper.CSharp.Core.Extensions.IEnumerableExtensions
+namespace Zooper.CSharp.Core.Extensions
 {
 	public static class EnumerableExtensions
 	{
