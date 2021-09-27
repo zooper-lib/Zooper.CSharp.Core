@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Zooper.CSharp.Core.Extensions.ObjectExtensions
+namespace Zooper.CSharp.Core.Extensions
 {
 	public static class ObjectExtensions
 	{

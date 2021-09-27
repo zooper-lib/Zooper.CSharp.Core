@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Zooper.CSharp.Core.Extensions.ListExtensions
+namespace Zooper.CSharp.Core.Extensions
 {
     public static class GenericListExtensions
     {
