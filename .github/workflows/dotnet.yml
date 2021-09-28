@@ -37,3 +37,4 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: Zooper.CSharp.Core.csproj
+        VERSION_REGEX: "[0-9]+.[0-9]+.[0-9]+"
