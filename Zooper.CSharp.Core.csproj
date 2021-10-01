@@ -5,7 +5,7 @@
 		<Nullable>warnings</Nullable>
 		<Company>Zooper</Company>
 		<Copyright>Zooper</Copyright>
-		<Version>0.0.2</Version>
+		<Version>0.0.3</Version>
 		<PackageProjectUrl>https://github.com/zooper-lib</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/zooper-lib/Zooper.CSharp.Core</RepositoryUrl>
