@@ -15,6 +15,7 @@
 		<Description>This is the core package of the whole zooper library on C# side.
 It contains base classes which will be used inside the other packages,
 but you can still use them as a container.</Description>
+		<Authors>DirtyNative</Authors>
 	</PropertyGroup>
 
 	<Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
