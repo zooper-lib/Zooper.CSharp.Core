@@ -1,21 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Nullable>warnings</Nullable>
-    <Company>Zooper</Company>
-    <Copyright>Zooper</Copyright>
-    <PackageProjectUrl>https://github.com/zooper-lib</PackageProjectUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/zooper-lib/Zooper.CSharp.Core</RepositoryUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	  <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>warnings</Nullable>
+		<Company>Zooper</Company>
+		<Copyright>Zooper</Copyright>
+		<Version>0.0.2</Version>
+		<PackageProjectUrl>https://github.com/zooper-lib</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/zooper-lib/Zooper.CSharp.Core</RepositoryUrl>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Description>This is the core package of the whole zooper library on C# side.
+It contains base classes which will be used inside the other packages,
+but you can still use them as a container.</Description>
+	</PropertyGroup>
 
 	<Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
-		<ReadLinesFromFile File="../CHANGELOG.md" >
-			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines"/>
+		<ReadLinesFromFile File="../CHANGELOG.md">
+			<Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
 		</ReadLinesFromFile>
 		<PropertyGroup>
 			<PackageReleaseNotes>@(ReleaseNoteLines, '%0a')</PackageReleaseNotes>
@@ -23,14 +27,12 @@
 	</Target>
 
 	<ItemGroup>
-    <None Remove=".gitignore" />
-    <None Remove="Zooper.CSharp.Core.sln.DotSettings" />
-  </ItemGroup>
+		<None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+		<None Include="README.md" Pack="true" PackagePath="README.md" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="README.md">
-      <Pack>True</Pack>
-    </None>
-  </ItemGroup>
-
+	<ItemGroup>
+		<None Remove=".gitignore" />
+		<None Remove="Zooper.CSharp.Core.sln.DotSettings" />
+	</ItemGroup>
 </Project>
