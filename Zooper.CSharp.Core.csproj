@@ -9,7 +9,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/zooper-lib/Zooper.CSharp.Core</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
 	  <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
 
