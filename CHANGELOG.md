@@ -5,3 +5,7 @@
 ## 0.0.2
 
 - Testings for Github actions
+
+## 0.0.3
+
+- Configured GitHub and GitHub actions for automatic delivery
